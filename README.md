@@ -1,5 +1,10 @@
 # Bookmark Manager
 
+> Built with [Dark Factory v4](https://github.com/ibuzzardo/dark-factory-v4) — autonomous AI software development pipeline
+
+**[Live Demo](https://bookmark-manager-ibuzzardos-projects.vercel.app)**
+
+
 A modern bookmark manager built with Next.js 15, TypeScript, and Tailwind CSS. Organize your bookmarks with folders and tags, search across all content, and keep everything synced with localStorage.
 
 ## Features
