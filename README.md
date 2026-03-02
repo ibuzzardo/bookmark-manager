@@ -7,6 +7,10 @@
 
 A modern bookmark manager built with Next.js 15, TypeScript, and Tailwind CSS. Organize your bookmarks with folders and tags, search across all content, and keep everything synced with localStorage.
 
+
+![bookmark-manager screenshot](docs/screenshot.png)
+
+
 ## Features
 
 - 📚 **Save bookmarks** with automatic metadata fetching
