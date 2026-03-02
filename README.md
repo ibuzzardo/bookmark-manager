@@ -17,6 +17,13 @@ A modern bookmark manager built with Next.js 15, TypeScript, and Tailwind CSS. O
 - 💾 **Local storage** - all data persists in your browser
 - 🚀 **Fast and modern** - built with Next.js 15 App Router
 
+
+## Tech Stack
+
+- Next.js 15, TypeScript, Tailwind CSS
+- shadcn/ui component library
+- Lucide icons
+
 ## Getting Started
 
 ### Prerequisites
