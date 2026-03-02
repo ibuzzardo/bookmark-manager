@@ -4,13 +4,14 @@ import { updateBookmarkSchema } from '@/lib/validators';
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ): Promise<NextResponse> {
+  const { id } = await params;
   try {
     const body = await request.json();
     const validatedData = updateBookmarkSchema.parse(body);
     
-    const bookmark = store.updateBookmark(params.id, validatedData);
+    const bookmark = store.updateBookmark(id, validatedData);
     
     if (!bookmark) {
       return NextResponse.json(
@@ -39,10 +40,11 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ): Promise<NextResponse> {
+  const { id } = await params;
   try {
-    const success = store.deleteBookmark(params.id);
+    const success = store.deleteBookmark(id);
     
     if (!success) {
       return NextResponse.json(

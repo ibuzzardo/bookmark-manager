@@ -3,17 +3,18 @@ import { store } from '@/lib/store';
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ): Promise<NextResponse> {
+  const { id } = await params;
   try {
-    if (params.id === 'uncategorized') {
+    if (id === 'uncategorized') {
       return NextResponse.json(
         { error: 'Cannot delete the default folder' },
         { status: 400 }
       );
     }
 
-    const success = store.deleteFolder(params.id);
+    const success = store.deleteFolder(id);
     
     if (!success) {
       return NextResponse.json(
